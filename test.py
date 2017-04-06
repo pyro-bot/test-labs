@@ -1,5 +1,6 @@
 import unittest
 from factorial import factorial
+import threading as th
 
 class uTest(unittest.TestCase):
 
@@ -21,14 +22,14 @@ class uTest(unittest.TestCase):
     def test_less_zero(self):
         self.assertEqual(factorial(-10),1)
     
-    def test_time(self):
-        import threading as th
-        thred=th.Thread(target=factorial,args=(100000,))
-        thred.start()
-        thred.join(5)
-        if thred.isAlive():
-            del thred
-            self.fail('Время выполнения больше 5 сек')
+    # FIXME Глученый тест. В консоле все прекрасно работает и если он выполнятеся успешно, то тоже все работает. Но не дай бох ему провалится и при этом его запустили из ГУИ - зависнит к хуам
+    # def test_time(self):
+    #     thred=th.Thread(target=factorial,args=(100000,))
+    #     thred.start()
+    #     thred.join(5)
+    #     if thred.isAlive():
+    #         del thred
+    #         self.fail('Время выполнения больше 5 сек')
 
     
 
