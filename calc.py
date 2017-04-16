@@ -6,5 +6,12 @@ def factorial(num):
         buf*=i
     return buf
 
+def div(a,b):
+    return a/b
+
+def minus(a,b):
+    return a-b
+
+
 if __name__=='__main__':
-    print(factorial(100))
+    print(factorial(5))
