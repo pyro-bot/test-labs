@@ -1,0 +1,8 @@
+<label for="a">a</label>
+<input mdInput name="a" (change)='onChange($event,"a")' (keyup)='onChange($event,"a")' [value]='vars.a' type="text" required>
+<label for="b">b</label>
+<input mdInput name="b" (change)='onChange($event,"b")' (keyup)='onChange($event,"b")' [value]='vars.b' type="text" required>
+<label for="c">c</label>
+<input mdInput name="c" (change)='onChange($event,"c")' (keyup)='onChange($event,"c")' [value]='vars.c' type="text" required>
+<span>(a! / b) - c = </span>
+<span id="result">{{result}}</span>
